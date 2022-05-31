@@ -1,1 +1,35 @@
-<p>register-page works!</p>
+<div class="login-form">
+  <div class="login-form__title">
+    <h2>Регистрация</h2>
+  </div>
+  <form [formGroup]="loginForm" novalidate>
+    <p>
+      <mat-form-field class="login-admin-form__field" appearance="fill" color="primary">
+        <mat-label>Имя пользователя</mat-label>
+        <input matInput type="text" formControlName="username">
+        <mat-icon matSuffix>account_circle</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="login-admin-form__field" appearance="fill" color="primary">
+        <mat-label>Пароль</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+    </p>
+    <p class="login-admin-form__btn">
+      <button mat-stroked-button (click)="singUpUser()">Создать аккаунт</button>
+    </p>
+  </form>
+</div>

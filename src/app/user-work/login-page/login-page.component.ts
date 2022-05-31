@@ -16,8 +16,6 @@ export class LoginPageComponent implements OnInit {
   loginInfo!: LoginInfo;
   hide: any;
   roles: string[] = [];
-  jwt_token_role:string[]=[];
-  role:string="";
 
   constructor( private dialogRef: MatDialogRef<LoginPageComponent>,
                private fb: FormBuilder,private authService: AuthService,

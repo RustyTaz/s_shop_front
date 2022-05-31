@@ -2,14 +2,14 @@
 <header class="header--user" *ngSwitchDefault>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <button mat-icon-button>
+      <button routerLink="" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
-      <h1 class="header__title">S-Shop</h1>
+      <h1  class="header__title">S-Shop</h1>
       <span></span>
       <div>
-        <a class="header__item" mat-button> Каталог товаров </a>
-        <a class="header__item" mat-button> Создать аккаунт </a>
+        <a routerLink="catalog" class="header__item" mat-button> Каталог товаров </a>
+        <a class="header__item" mat-button (click)="openModalRegister()"> Создать аккаунт </a>
       </div>
 
       <button class="login-button header__item" [matMenuTriggerFor]="menu" mat-stroked-button>
@@ -18,7 +18,7 @@
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item (click)="openModalLogin()">Войти</button>
-        <button mat-menu-item>Зарегистрироваться</button>
+        <button mat-menu-item (click)="openModalRegister()">Зарегистрироваться</button>
       </mat-menu>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -32,13 +32,13 @@
       <h1 class="header__title">S-Shop CRM System</h1>
 
       <button class="login-button header__item" mat-stroked-button>
-        <a mat-button> Выйти </a>
+        <a mat-button (click)="logout()"> Выйти </a>
         <mat-icon matSuffix>exit_to_app</mat-icon>
       </button>
     </mat-toolbar-row>
     <mat-toolbar-row>
       <div>
-        <a class="header__item" mat-button> Товары </a>
+        <a routerLink="catalog"  class="header__item" mat-button> Каталог товаров </a>
         <a class="header__item" mat-button> Категории</a>
         <a class="header__item" mat-button> Компании</a>
         <a class="header__item" mat-button> Склады</a>
@@ -58,13 +58,13 @@
       <h1 class="header__title">S-Shop</h1>
 
       <button class="login-button header__item" mat-stroked-button>
-        <a mat-button> Выйти </a>
+        <a mat-button (click)="logout()"> Выйти </a>
         <mat-icon matSuffix>exit_to_app</mat-icon>
       </button>
     </mat-toolbar-row>
     <mat-toolbar-row>
       <div>
-        <a class="header__item" mat-button> Товары </a>
+        <a routerLink="catalog"  class="header__item" mat-button> Каталог товаров </a>
         <a class="header__item" mat-button> Категории</a>
         <a class="header__item" mat-button> Корзина</a>
         <a class="header__item" mat-button> Мои заказы</a>
@@ -73,3 +73,4 @@
   </mat-toolbar>
 </header>
 </div>
+<router-outlet></router-outlet>

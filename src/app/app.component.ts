@@ -3,6 +3,7 @@ import {TokenStorageService} from "./services/token-storage.service";
 import {MatDialog} from "@angular/material/dialog";
 import {LoginPageComponent} from "./user-work/login-page/login-page.component";
 import {CheckRoleService} from "./services/check-role.service";
+import {RegisterPageComponent} from "./user-work/register-page/register-page.component";
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,10 @@ export class AppComponent {
     this.check_role.role$.subscribe((role)=>this.role=role);
 
   }
+
+  ngOnInit(){
+
+  }
   openModalLogin(): void {
 
     const dialogRef = this.dialog.open(LoginPageComponent, {
@@ -34,13 +39,32 @@ export class AppComponent {
 
   }
 
+  openModalRegister(): void{
+    const dialogRef = this.dialog.open(RegisterPageComponent, {
+      width: '350px',
+      height: '400px'
+    })
+    dialogRef.afterClosed().subscribe();
+
+  }
   ngOnDestroy(){
 
+  }
+
+  updateState(){
+    localStorage.clear();
+    this.jwt_token_role=this.token.getAuthorities();
+    this.role=this.jwt_token_role[0];
+    console.log(this.role)
+    this.check_role.role$.subscribe((role)=>this.role=role);
   }
 
   login(){}
 
   logout() {
+    this.updateState();
     this.token.signOut();
+    this.check_role.role$.subscribe((role)=>this.role=role);
+    console.log("Logout")
   }
 }

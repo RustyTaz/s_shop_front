@@ -17,6 +17,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
+import {MatSelectModule} from "@angular/material/select";
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,7 @@ import {MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog
     MatIconModule,
     MatFormFieldModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [httpInterceptorProviders,
 
