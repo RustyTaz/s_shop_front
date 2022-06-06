@@ -35,7 +35,7 @@
     <label class="catalog__checkbox-item">
       <input type="checkbox" >
       <span></span>
-      Under Armor
+      Jordan
     </label>
     <p class="catalog__checkbox-title">Цена</p>
     <label class="catalog__checkbox-item">
@@ -59,15 +59,148 @@
       >20000
     </label>
     <div class="catalog__checkbox-but">
-      <button class="catalog__checkbox-but__item">Применить</button>
-      <button class="catalog__checkbox-but__item">Сбросить</button>
+      <button mat-raised-button class="catalog__checkbox-but__item">Применить</button>
+      <button mat-raised-button class="catalog__checkbox-but__item">Сбросить</button>
     </div>
-
-
-
+    <p class="catalog__checkbox-title">Сортировать по</p>
+    <div class="catalog__checkbox-but">
+      <mat-form-field class="sort__field" appearance="fill" >
+        <mat-label> Сортировать</mat-label>
+        <mat-select>
+          <mat-option>Отменить</mat-option>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
   </div>
 
   <div class="catalog__list">
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/nike1.png">
+      <mat-card-header>
+
+        <mat-card-title>Nike Air More Uptempo</mat-card-title>
+        <mat-card-subtitle>Кроссовки LifeStyle</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+
+        <button mat-button>Подробнее</button>
+        <button class="price" mat-button>18 990</button>
+        <mat-icon> border_color</mat-icon>
+        <mat-icon>delete</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/nik2.png">
+      <mat-card-header>
+
+        <mat-card-title>Nike Air Force 1 High</mat-card-title>
+        <mat-card-subtitle>Кроссовки LifeStyle</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+
+        <button mat-button>Подробнее</button>
+        <button class="price"  mat-button>12 990</button>
+        <mat-icon> border_color</mat-icon>
+        <mat-icon>delete</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/nap.png">
+      <mat-card-header>
+
+        <mat-card-title>Напульсник Adidas</mat-card-title>
+        <mat-card-subtitle>Для баскетбола</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+
+        <button mat-button>Подробнее</button>
+        <button class="price"  mat-button>1 190</button>
+        <mat-icon> border_color</mat-icon>
+        <mat-icon>delete</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/ball.png">
+      <mat-card-header>
+
+        <mat-card-title>Jordan Ultimate 8P</mat-card-title>
+        <mat-card-subtitle>Баскетбольные мячи</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+        <button mat-button>Подробнее</button>
+        <button class="price"  mat-button>5 190</button>
+        <mat-icon> border_color</mat-icon>
+        <mat-icon>delete</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/jersey1.png">
+      <mat-card-header>
+
+        <mat-card-title>Майка Dallas Mavericks</mat-card-title>
+        <mat-card-subtitle>Баскетбольные майки</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+        <button mat-button>Подробнее</button>
+        <button  class="price"  mat-button>9 990</button>
+        <mat-icon> border_color</mat-icon>
+        <mat-icon>delete</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/jersey2.png">
+      <mat-card-header>
+
+        <mat-card-title>Майка LA Lakers</mat-card-title>
+        <mat-card-subtitle>Баскетбольные майки</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+        <button mat-button>Подробнее</button>
+        <button class="price"  mat-button>9 990</button>
+        <mat-icon> border_color</mat-icon>
+        <mat-icon>delete</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/nike3.png">
+      <mat-card-header>
+
+        <mat-card-title>Converse All Star</mat-card-title>
+        <mat-card-subtitle>Баскетбольные кроссовки</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+
+        <button mat-button>Подробнее</button>
+        <button class="price"  mat-button>17 990</button>
+        <mat-icon> border_color</mat-icon>
+        <mat-icon>delete</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="catalog__list__item">
+
+      <img class="card-img" mat-card-image src="assets/plus.png">
+      <mat-card-title>Добавить товар</mat-card-title>
+    </mat-card>
 
   </div>
 </div>

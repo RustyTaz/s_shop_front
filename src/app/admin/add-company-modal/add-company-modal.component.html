@@ -1,0 +1,16 @@
+<h2>Компания</h2>
+<form [formGroup]="addForm" novalidate>
+<mat-form-field appearance="fill">
+  <mat-label>Название</mat-label>
+  <input matInput type="text" [(ngModel)]="loginForm.companyname"  formControlName="companyname">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Страна</mat-label>
+  <input  matInput type="text" [(ngModel)]="loginForm.country" formControlName="country">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Описание</mat-label>
+  <textarea matInput type="text" [(ngModel)]="loginForm.desc" formControlName="desc"></textarea>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="setCompany()" >Добавить</button>
+</form>

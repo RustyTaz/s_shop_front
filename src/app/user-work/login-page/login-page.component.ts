@@ -36,6 +36,7 @@ export class LoginPageComponent implements OnInit {
   loginAdmin() {
     let {username, password} = this.loginForm.value;
     this.loginInfo = new LoginInfo(username,password);
+    console.log("ddddddd"+username)
     this.authService.attemptAuth(this.loginInfo).subscribe(
       data => {
         console.log(data);

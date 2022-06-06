@@ -26,6 +26,7 @@ span {
 
 
 .catalog{
+  padding: 5px 0 0 5%;
   display: flex;
 }
 .catalog {
@@ -67,23 +68,35 @@ span {
       }
     }
   }
-  &__catalog {
-    display: flex;
-    flex-wrap: wrap;
-    width: 85%;
-    &-item__img {
-      width: 320px;
-      height: auto;
-    }
-    &-item__text {
-      display: flex;
-      justify-content: center;
-      padding-top: 10px;
-      cursor: pointer;
-      &:hover {
-        color: @orange;
-      }
-    }
-  }
 }
+
+.sort__field{
+  border-radius: 5px ;
+  border-color: black;
+  background-color: white;
+}
+
+.catalog__list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.catalog__list__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 300px;
+
+  margin: 30px 30px 15px 15px;
+}
+.price{
+  font-weight: bold ;
+  font-size: 18px;
+}
+
+.card-img{
+  width: 265px;
+}
+
 

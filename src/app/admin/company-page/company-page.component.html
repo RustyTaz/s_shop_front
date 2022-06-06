@@ -1,0 +1,29 @@
+<div class="cards">
+
+  <mat-card class="example-card" *ngFor="let comp of companies">
+    <mat-card-header>
+      <!--      <div mat-card-avatar class="example-header-image"><img src="assets/nike (1).png"></div>-->
+      <mat-card-title> {{comp.companyname}}</mat-card-title>
+      <mat-card-subtitle> {{comp.country}} </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        {{comp.description}}
+      </p>
+    </mat-card-content>
+    <br>
+    <mat-card-actions>
+      <button class="card_button" mat-button>Изменить</button>
+      <button class="card_button" mat-button>Удалить</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card" (click)="openModalCompanies()">
+    <mat-card-header>
+
+      <mat-card-title> + Добавить компанию</mat-card-title>
+
+    </mat-card-header>
+  </mat-card>
+</div>

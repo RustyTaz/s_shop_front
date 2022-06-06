@@ -4,6 +4,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {LoginPageComponent} from "./user-work/login-page/login-page.component";
 import {CheckRoleService} from "./services/check-role.service";
 import {RegisterPageComponent} from "./user-work/register-page/register-page.component";
+import {TestModalComponent} from "./test-modal/test-modal.component";
 
 @Component({
   selector: 'app-root',
@@ -41,6 +42,15 @@ export class AppComponent {
 
   openModalRegister(): void{
     const dialogRef = this.dialog.open(RegisterPageComponent, {
+      width: '350px',
+      height: '400px'
+    })
+    dialogRef.afterClosed().subscribe();
+
+  }
+
+  openTestModal(): void{
+    const dialogRef = this.dialog.open(TestModalComponent, {
       width: '350px',
       height: '400px'
     })

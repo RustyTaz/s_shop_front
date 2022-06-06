@@ -10,6 +10,7 @@
       <div>
         <a routerLink="catalog" class="header__item" mat-button> Каталог товаров </a>
         <a class="header__item" mat-button (click)="openModalRegister()"> Создать аккаунт </a>
+<!--        <a class="header__item" mat-button (click)="openTestModal()"> Test </a>-->
       </div>
 
       <button class="login-button header__item" [matMenuTriggerFor]="menu" mat-stroked-button>
@@ -40,9 +41,9 @@
       <div>
         <a routerLink="catalog"  class="header__item" mat-button> Каталог товаров </a>
         <a class="header__item" mat-button> Категории</a>
-        <a class="header__item" mat-button> Компании</a>
+        <a routerLink="company-list" class="header__item" mat-button> Компании</a>
         <a class="header__item" mat-button> Склады</a>
-        <a class="header__item" mat-button> Клиенты</a>
+        <a routerLink="user-list" class="header__item" mat-button> Пользователи</a>
         <a class="header__item" mat-button> Заказы</a>
       </div>
     </mat-toolbar-row>
@@ -74,3 +75,11 @@
 </header>
 </div>
 <router-outlet></router-outlet>
+
+<footer>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>

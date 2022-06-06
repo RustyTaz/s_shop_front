@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,12 +18,17 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
 import {MatSelectModule} from "@angular/material/select";
+import {CatalogModule} from "./catalog/catalog.module";
+import {MatInputModule} from "@angular/material/input";
+import { TestModalComponent } from './test-modal/test-modal.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    TestModalComponent
   ],
   imports: [
     BrowserModule,
@@ -32,19 +37,25 @@ import {MatSelectModule} from "@angular/material/select";
     UserModule,
     UserWorkModule,
     FormsModule,
+    CatalogModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
     MatMenuModule,
     MatDialogModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatCardModule,
   ],
   providers: [httpInterceptorProviders,
 
 
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
